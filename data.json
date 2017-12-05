@@ -1,0 +1,7 @@
+{
+    "prefix": "!",
+    "token": "#",
+    "tags": {
+        "test": "this is a test tag"
+    }
+}
