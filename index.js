@@ -2,6 +2,9 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
     const data = require('./data.json');
+    const prefix = data.prefix;
+    
+    var tags = data.tags;
 
 client.on('ready', () => {
     console.log('SpaceTaco logged in!!');
@@ -15,4 +18,4 @@ client.on('message', message => {
     
 });
 
-client.login( token, duh );
+client.login(data.token);
