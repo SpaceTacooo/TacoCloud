@@ -17,7 +17,7 @@ client.on('message', message => {
     }
     
     if (message.content.toLowerCase() === `${prefix}serverinfo`) {
-        if (message.guild === false) return (`The bot hit an error while performing this command:\nGuild not available. This means the guild is not able to provide data right now.`);
+        if (message.guild == null) return (`The bot hit an error while performing this command:\nGuild not available. This means the guild is not able to provide data right now.`);
         message.channel.send(`__Server Information__:\n\n  **Name**\n  ${message.guild.name}\n\n  **Owner**\n  ${message.guild.owner.user.tag} (${message.guild.owner.id})\n\n  **Members (inc. bots)**\n  ${message.guild.members.size}\n\n  **Region**\n  ${message.guild.region}\n\n  **Created**\n  ${message.guild.createdAt}
     }
     
